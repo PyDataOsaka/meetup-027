@@ -60,11 +60,11 @@ We have recently begun to have “mamba meetings” every week on Monday 16:00 C
 
 It is also really cool to see the mamba contributor community growing:
 
-- Claudia Rogoz from Palantir and Antoine Provoust at QuantStack are currently working hard on improving solver messages
-- Joel Lamotte and Johan Mabille of QuantStack have contributed many improvements to micromamba (and are currently focusing on the powerloader integration).
-- Jonas Haag from QuantCo has contributed countless improvements and is now a core maintainer with merge rights. Others at QuantCo have added fixes and improvements as well: thanks Pavel Zwerschke and Adrian Freund.
-- Jaime Rodríguez-Guerra from Quansight has worked on the conda ↔ libmamba integration for which he did a lot of testing and helped us uncover some corner cases. That helped to make mamba more stable.
-- Chris Burr from CERN has really improved the speed of micromamba’s linking phase
+- **Claudia Rogoz** from `Palantir` and **Antoine Provoust** at *QuantStack* are currently working hard on improving solver messages
+- **Joel Lamotte** and **Johan Mabille** of *QuantStack* have contributed many improvements to micromamba (and are currently focusing on the powerloader integration).
+- **Jonas Haag** from *QuantCo* has contributed countless improvements and is now a core maintainer with merge rights. Others at *QuantCo* have added fixes and improvements as well: thanks Pavel Zwerschke and Adrian Freund.
+- **Jaime Rodríguez-Guerra** from *Quansight* has worked on the conda ↔ libmamba integration for which he did a lot of testing and helped us uncover some corner cases. That helped to make mamba more stable.
+- **Chris Burr** from *CERN* has really improved the speed of micromamba’s linking phase
 
 Thanks to all these wonderful contributions, mamba is as fast and stable as it is today.
 
