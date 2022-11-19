@@ -1,6 +1,7 @@
-Releasing mamba 1.0
+# Releasing mamba 1.0
+
 The mamba package manager has been in the works for 3 years. Starting from the simple idea whether it’s possible to make conda faster to a proper, standalone package management tool that is used by the largest distributions in the conda & mamba ecosystem (conda-forge and bioconda). Today we are proud to announce that mamba is mature enough for a 1.0 release.
-When we started the development of the mamba package manager, the conda-forge repository was already experiencing a major growth in the number of available package versions, and the existing “conda” package manager was unbearably slow for certain tasks. I was fuelled by the idea of publishing many robotics-related packages on conda-forge (specifically the ROS stack), but I realized that it would be difficult with the slowness of conda. Thankfully we tried to use the libsolv library to resolve package dependencies faster, and with a lot of support from the libsolv maintainers got an initial prototype pretty quickly!
+When we started the development of the mamba package manager, the conda-forge repository was already experiencing a major growth in the number of available package versions, and the existing “conda” package manager was unbearably slow for certain tasks. I was fuelled by the idea of publishing many robotics-related packages on conda-forge (specifically the [ROS stack](https://github.com/robostack/ros-humble)), but I realized that it would be difficult with the slowness of conda. Thankfully we tried to use the `libsolv` library to resolve package dependencies faster, and with a lot of support from the `libsolv` maintainers got an initial prototype pretty quickly!
 
 Today, mamba is widely adopted by users across the PyData world and beyond, in CI systems or for quick deployments to the cloud (for example in the Jupyter/MyBinder projects).
 
