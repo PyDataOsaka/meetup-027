@@ -62,13 +62,19 @@
 日本語訳
 
 ## Try it now
-We would love it if more people try `micromamba` and provide us with feedback. It’s easy to take `micromamba` for a spin:
+<!-- We would love it if more people try `micromamba` and provide us with feedback. It’s easy to take `micromamba` for a spin: -->
+日本語訳
 
-- **[provision-with-micromamba](https://github.com/mamba-org/provision-with-micromamba):** use micromamba inside Github Actions to setup the CI environments quickly
-- **[micromamba-docker](https://github.com/mamba-org/micromamba-docker):** use the small `micromamba-docker` image to build your containers with ease
-- **[micromamba-devcontainer](https://github.com/mamba-org/micromamba-devcontainer):** A general-purpose micromamba-enabled VS Code development container image — save the time and effort of configuring development tools for each project × collaborator × device.
-- **micromamba on your local machine / in the cloud:** run curl micro.mamba.pm/install.sh | bash to install micromamba on your computer — after that it’s available with micromamba create -n myenv python -c conda-forge (we’re working on a simple installation for Windows. Until then follow the docs).
-- **[picomamba](https://github.com/mamba-org/picomamba):** mamba in the browser thanks to WASM (also take a look at [emscripten-forge](http://github.com/emscripten-forge/recipes) where we are crossing over WASM × conda-forge to build packages for mamba & the web)
+<!-- - **[provision-with-micromamba](https://github.com/mamba-org/provision-with-micromamba):** use micromamba inside Github Actions to setup the CI environments quickly -->
+- **[provision-with-micromamba](https://github.com/mamba-org/provision-with-micromamba):** 日本語訳
+<!-- - **[micromamba-docker](https://github.com/mamba-org/micromamba-docker):** use the small `micromamba-docker` image to build your containers with ease -->
+- **[micromamba-docker](https://github.com/mamba-org/micromamba-docker):** 日本語訳
+<!-- - **[micromamba-devcontainer](https://github.com/mamba-org/micromamba-devcontainer):** A general-purpose micromamba-enabled VS Code development container image — save the time and effort of configuring development tools for each project × collaborator × device. -->
+- **[micromamba-devcontainer](https://github.com/mamba-org/micromamba-devcontainer):** 日本語訳
+<!-- - **micromamba on your local machine / in the cloud:** run curl micro.mamba.pm/install.sh | bash to install micromamba on your computer — after that it’s available with micromamba create -n myenv python -c conda-forge (we’re working on a simple installation for Windows. Until then follow the docs). -->
+- **micromamba on your local machine / in the cloud:** 日本語訳
+<!-- - **[picomamba](https://github.com/mamba-org/picomamba):** mamba in the browser thanks to WASM (also take a look at [emscripten-forge](http://github.com/emscripten-forge/recipes) where we are crossing over WASM × conda-forge to build packages for mamba & the web) -->
+- **[picomamba](https://github.com/mamba-org/picomamba):** 日本語訳
 
 ## We’re not stopping here!
 There’s more we’re planning to add to mamba soon, including:
