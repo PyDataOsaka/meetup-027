@@ -51,16 +51,21 @@ There’s more we’re planning to add to mamba soon, including:
 
 ## And then there is more …
 A teaser for prefix.dev
-But wait — there’s more: we’re happy to announce that we’ve also started a new company called prefix.dev to move software package management and more forward! We’ll have more to share on that next week: if you want the latest news, you can follow me on Twitter.
+
+**But wait — there’s more:** we’re happy to announce that we’ve also started a new company called **prefix.dev** to move software package management and more forward!
+We’ll have more to share on that next week: if you want the latest news, you can [follow me on Twitter](https://twitter.com/wuoulf).
 
 ## Community
 
 All the contributors for the 1.0 release!
-We have recently begun to have “mamba meetings” every week on Monday 16:00 CET. Everybody is invited (users and maintainers alike). Here is the calendar link. We also have a little “Gitter” community now: https://gitter.im/mamba-org/Lobby
+We have recently begun to have “mamba meetings” every week on Monday 16:00 CET.
+Everybody is invited (users and maintainers alike).
+[Here is the calendar link](https://calendar.google.com/calendar/u/0?cid=YWIzanJmcGVkZTBrcTB1YnNyb2U4MmNkMDBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ).
+We also have a little “Gitter” community now: https://gitter.im/mamba-org/Lobby
 
 It is also really cool to see the mamba contributor community growing:
 
-- **Claudia Rogoz** from `Palantir` and **Antoine Provoust** at *QuantStack* are currently working hard on improving solver messages
+- **Claudia Rogoz** from *Palantir* and **Antoine Provoust** at *QuantStack* are currently working hard on improving solver messages
 - **Joel Lamotte** and **Johan Mabille** of *QuantStack* have contributed many improvements to micromamba (and are currently focusing on the powerloader integration).
 - **Jonas Haag** from *QuantCo* has contributed countless improvements and is now a core maintainer with merge rights. Others at *QuantCo* have added fixes and improvements as well: thanks Pavel Zwerschke and Adrian Freund.
 - **Jaime Rodríguez-Guerra** from *Quansight* has worked on the conda ↔ libmamba integration for which he did a lot of testing and helped us uncover some corner cases. That helped to make mamba more stable.
