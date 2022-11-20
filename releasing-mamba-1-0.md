@@ -1,25 +1,43 @@
 # Releasing mamba 1.0
 
-The mamba package manager has been in the works for 3 years.
-Starting from the simple idea whether it’s possible to make conda faster to a proper, standalone package management tool that is used by the largest distributions in the conda & mamba ecosystem (conda-forge and bioconda).
-Today we are proud to announce that mamba is mature enough for a 1.0 release.
-When we started the development of the mamba package manager, the conda-forge repository was already experiencing a major growth in the number of available package versions, and the existing “conda” package manager was unbearably slow for certain tasks.
-I was fuelled by the idea of publishing many robotics-related packages on conda-forge (specifically the [ROS stack](https://github.com/robostack/ros-humble)), but I realized that it would be difficult with the slowness of conda.
-Thankfully we tried to use the `libsolv` library to resolve package dependencies faster, and with a lot of support from the `libsolv` maintainers got an initial prototype pretty quickly!
+<!-- The mamba package manager has been in the works for 3 years. -->
+日本語訳
+<!-- Starting from the simple idea whether it’s possible to make conda faster to a proper, standalone package management tool that is used by the largest distributions in the conda & mamba ecosystem (conda-forge and bioconda). -->
+日本語訳
+<!-- Today we are proud to announce that mamba is mature enough for a 1.0 release. -->
+日本語訳
+<!-- When we started the development of the mamba package manager, the conda-forge repository was already experiencing a major growth in the number of available package versions, and the existing “conda” package manager was unbearably slow for certain tasks. -->
+日本語訳
+<!-- I was fuelled by the idea of publishing many robotics-related packages on conda-forge (specifically the [ROS stack](https://github.com/robostack/ros-humble)), but I realized that it would be difficult with the slowness of conda. -->
+日本語訳
+<!-- Thankfully we tried to use the `libsolv` library to resolve package dependencies faster, and with a lot of support from the `libsolv` maintainers got an initial prototype pretty quickly! -->
+日本語訳
 
-Today, mamba is widely adopted by users across the PyData world and beyond, in CI systems or for quick deployments to the cloud (for example in the Jupyter/MyBinder projects).
+<!-- Today, mamba is widely adopted by users across the PyData world and beyond, in CI systems or for quick deployments to the cloud (for example in the Jupyter/MyBinder projects). -->
+日本語訳
 
 ## Strong foundations in C++
 
-Early on I decided to use C++ for the implementation of the critical parts of a speedy package management experience: C++ gives us a nice high-level interface (exposed in `libmamba`) and simple access to low-level C libraries ( `libsolv`, `libarchive` and `libcurl` are the main dependencies of mamba), and also — given that it is a compiled language — offers high performance for all operations.
+<!-- Early on I decided to use C++ for the implementation of the critical parts of a speedy package management experience: -->
+日本語訳
+<!-- C++ gives us a nice high-level interface (exposed in `libmamba`) and simple access to low-level C libraries ( `libsolv`, `libarchive` and `libcurl` are the main dependencies of mamba), and also — given that it is a compiled language — offers high performance for all operations. -->
+日本語訳
 
-Instead of making mamba a monolithic project, we decided to split it in smaller packages/parts for better flexibility and integration in downstream projects.
-`libmamba` is a standalone library for all basic features related to package mamagement.
-Thanks to `pybind11`, it provides really nice and easy-to-use Python bindings through `libmambapy` .
-mamba simply builds on top of `libmambapy` and adds the CLI interface.
+<!-- Instead of making mamba a monolithic project, we decided to split it in smaller packages/parts for better flexibility and integration in downstream projects. -->
+日本語訳
+<!-- `libmamba` is a standalone library for all basic features related to package mamagement. -->
+日本語訳
+<!-- Thanks to `pybind11`, it provides really nice and easy-to-use Python bindings through `libmambapy` . -->
+日本語訳
+<!-- mamba simply builds on top of `libmambapy` and adds the CLI interface. -->
+日本語訳
 
-We’re proud to say that one of the first serious users of `libmambapy` is the *conda* project; they are integrating with it to provide the same speedy package resolving experience from `mamba` in `conda`!
-We are looking forward to more use cases for `libmamba` & `libmambapy` in the future!
+<!-- We’re proud to say that one of the first serious users of `libmambapy` is the *conda* project; -->
+日本語訳
+<!-- they are integrating with it to provide the same speedy package resolving experience from `mamba` in `conda`! -->
+日本語訳
+<!-- We are looking forward to more use cases for `libmamba` & `libmambapy` in the future! -->
+日本語訳
 
 ## What’s new in the 1.0 release?
 
