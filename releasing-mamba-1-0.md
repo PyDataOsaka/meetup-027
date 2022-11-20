@@ -93,29 +93,46 @@ There’s more we’re planning to add to mamba soon, including:
 ## And then there is more …
 A teaser for prefix.dev
 
-**But wait — there’s more:** we’re happy to announce that we’ve also started a new company called **prefix.dev** to move software package management and more forward!
-We’ll have more to share on that next week: if you want the latest news, you can [follow me on Twitter](https://twitter.com/wuoulf).
+<!-- **But wait — there’s more:** -->
+日本語訳
+<!-- we’re happy to announce that we’ve also started a new company called **prefix.dev** to move software package management and more forward! -->
+日本語訳
+<!-- We’ll have more to share on that next week: if you want the latest news, you can [follow me on Twitter](https://twitter.com/wuoulf). -->
+日本語訳
 
 ## Community
 
 All the contributors for the 1.0 release!
-We have recently begun to have “mamba meetings” every week on Monday 16:00 CET.
-Everybody is invited (users and maintainers alike).
-[Here is the calendar link](https://calendar.google.com/calendar/u/0?cid=YWIzanJmcGVkZTBrcTB1YnNyb2U4MmNkMDBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ).
-We also have a little “Gitter” community now: https://gitter.im/mamba-org/Lobby
 
-It is also really cool to see the mamba contributor community growing:
+<!-- We have recently begun to have “mamba meetings” every week on Monday 16:00 CET. -->
+日本語訳
+<!-- Everybody is invited (users and maintainers alike). -->
+日本語訳
+<!-- [Here is the calendar link](https://calendar.google.com/calendar/u/0?cid=YWIzanJmcGVkZTBrcTB1YnNyb2U4MmNkMDBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ). -->
+日本語訳
+<!-- We also have a little “Gitter” community now: https://gitter.im/mamba-org/Lobby -->
+日本語訳
 
-- **Claudia Rogoz** from *Palantir* and **Antoine Provoust** at *QuantStack* are currently working hard on improving solver messages
-- **Joel Lamotte** and **Johan Mabille** of *QuantStack* have contributed many improvements to micromamba (and are currently focusing on the powerloader integration).
-- **Jonas Haag** from *QuantCo* has contributed countless improvements and is now a core maintainer with merge rights. Others at *QuantCo* have added fixes and improvements as well: thanks Pavel Zwerschke and Adrian Freund.
-- **Jaime Rodríguez-Guerra** from *Quansight* has worked on the conda ↔ libmamba integration for which he did a lot of testing and helped us uncover some corner cases. That helped to make mamba more stable.
-- **Chris Burr** from *CERN* has really improved the speed of micromamba’s linking phase
+<!-- It is also really cool to see the mamba contributor community growing: -->
+日本語訳
 
-Thanks to all these wonderful contributions, mamba is as fast and stable as it is today.
+<!-- - **Claudia Rogoz** from *Palantir* and **Antoine Provoust** at *QuantStack* are currently working hard on improving solver messages -->
+- **Claudia Rogoz** from *Palantir* and **Antoine Provoust** at *QuantStack* 日本語訳
+<!-- - **Joel Lamotte** and **Johan Mabille** of *QuantStack* have contributed many improvements to micromamba (and are currently focusing on the powerloader integration). -->
+- **Joel Lamotte** and **Johan Mabille** of *QuantStack* 日本語訳
+<!-- - **Jonas Haag** from *QuantCo* has contributed countless improvements and is now a core maintainer with merge rights. Others at *QuantCo* have added fixes and improvements as well: thanks Pavel Zwerschke and Adrian Freund. -->
+- **Jonas Haag** from *QuantCo* 日本語訳
+<!-- - **Jaime Rodríguez-Guerra** from *Quansight* has worked on the conda ↔ libmamba integration for which he did a lot of testing and helped us uncover some corner cases. That helped to make mamba more stable. -->
+- **Jaime Rodríguez-Guerra** from *Quansight* 日本語訳
+<!-- - **Chris Burr** from *CERN* has really improved the speed of micromamba’s linking phase -->
+- **Chris Burr** from *CERN* 日本語訳
+
+<!-- Thanks to all these wonderful contributions, mamba is as fast and stable as it is today. -->
+日本語訳
 
 ### About the author
 
-
-Wolf Vollprecht is the creator of mamba, and a core contributor to the conda-forge project. He also organizes PackagingCon, the first conference for software package management.
-
+<!-- Wolf Vollprecht is the creator of mamba, and a core contributor to the conda-forge project. -->
+日本語訳
+<!-- He also organizes PackagingCon, the first conference for software package management. -->
+日本語訳
