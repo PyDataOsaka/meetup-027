@@ -41,13 +41,25 @@
 
 ## What’s new in the 1.0 release?
 
-Most of our activity is currently focused on improving the `micromamba` experience. `micromamba` is an evolution of `mamba` that does not rely on Python or conda. It comes as a single binary which makes installation and *boot-strapping* very easy, and doesn’t require a base environment or a *miniconda/miniforge* installation.
+<!-- Most of our activity is currently focused on improving the `micromamba` experience. -->
+日本語訳
+<!-- `micromamba` is an evolution of `mamba` that does not rely on Python or conda. -->
+日本語訳
+<!-- It comes as a single binary which makes installation and *boot-strapping* very easy, and doesn’t require a base environment or a *miniconda/miniforge* installation. -->
+日本語訳
 
-It also has a largely conda-compatible CLI (with some small deviations).
+<!-- It also has a largely conda-compatible CLI (with some small deviations). -->
+日本語訳
 
-The 1.0 release comes with improved shell scripts with autocompletion available in PowerShell, xonsh, fish, bash and zsh. Micromamba now also has a “shell” subcommand to enter a sub-shell without having to modify the system (just run `micromamba shell -n someenv`). And finally for the future, micromamba can now update itself with the `micromamba self-update` command.
+<!-- The 1.0 release comes with improved shell scripts with autocompletion available in PowerShell, xonsh, fish, bash and zsh. -->
+日本語訳
+<!-- Micromamba now also has a “shell” subcommand to enter a sub-shell without having to modify the system (just run `micromamba shell -n someenv`). -->
+日本語訳
+<!-- And finally for the future, micromamba can now update itself with the `micromamba self-update` command. -->
+日本語訳
 
-You can find [the full changelog here](https://github.com/mamba-org/mamba/releases/tag/2022.11.01).
+<!-- You can find [the full changelog here](https://github.com/mamba-org/mamba/releases/tag/2022.11.01). -->
+日本語訳
 
 ## Try it now
 We would love it if more people try `micromamba` and provide us with feedback. It’s easy to take `micromamba` for a spin:
