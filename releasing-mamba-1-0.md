@@ -23,28 +23,28 @@ We are looking forward to more use cases for `libmamba` & `libmambapy` in the fu
 
 ## What’s new in the 1.0 release?
 
-Most of our activity is currently focused on improving the micromamba experience. micromamba is an evolution of mamba that does not rely on Python or conda. It comes as a single binary which makes installation and boot-strapping very easy, and doesn’t require a base environment or a miniconda/miniforge installation.
+Most of our activity is currently focused on improving the `micromamba` experience. `micromamba` is an evolution of `mamba` that does not rely on Python or conda. It comes as a single binary which makes installation and *boot-strapping* very easy, and doesn’t require a base environment or a *miniconda/miniforge* installation.
 
 It also has a largely conda-compatible CLI (with some small deviations).
 
-The 1.0 release comes with improved shell scripts with autocompletion available in PowerShell, xonsh, fish, bash and zsh. Micromamba now also has a “shell” subcommand to enter a sub-shell without having to modify the system (just run micromamba shell -n someenv). And finally for the future, micromamba can now update itself with the micromamba self-update command.
+The 1.0 release comes with improved shell scripts with autocompletion available in PowerShell, xonsh, fish, bash and zsh. Micromamba now also has a “shell” subcommand to enter a sub-shell without having to modify the system (just run `micromamba shell -n someenv`). And finally for the future, micromamba can now update itself with the `micromamba self-update` command.
 
-You can find the full changelog here.
+You can find [the full changelog here](https://github.com/mamba-org/mamba/releases/tag/2022.11.01).
 
 ## Try it now
 We would love it if more people try `micromamba` and provide us with feedback. It’s easy to take `micromamba` for a spin:
 
 - **[provision-with-micromamba](https://github.com/mamba-org/provision-with-micromamba):** use micromamba inside Github Actions to setup the CI environments quickly
-- [micromamba-docker](https://github.com/mamba-org/micromamba-docker): use the small `micromamba-docker` image to build your containers with ease
-- [micromamba-devcontainer](https://github.com/mamba-org/micromamba-devcontainer): A general-purpose micromamba-enabled VS Code development container image — save the time and effort of configuring development tools for each project × collaborator × device.
-- micromamba on your local machine / in the cloud: run curl micro.mamba.pm/install.sh | bash to install micromamba on your computer — after that it’s available with micromamba create -n myenv python -c conda-forge (we’re working on a simple installation for Windows. Until then follow the docs).
-- [picomamba](https://github.com/mamba-org/picomamba): mamba in the browser thanks to WASM (also take a look at [emscripten-forge](http://github.com/emscripten-forge/recipes) where we are crossing over WASM × conda-forge to build packages for mamba & the web)
+- **[micromamba-docker](https://github.com/mamba-org/micromamba-docker):** use the small `micromamba-docker` image to build your containers with ease
+- **[micromamba-devcontainer](https://github.com/mamba-org/micromamba-devcontainer):** A general-purpose micromamba-enabled VS Code development container image — save the time and effort of configuring development tools for each project × collaborator × device.
+- **micromamba on your local machine / in the cloud:** run curl micro.mamba.pm/install.sh | bash to install micromamba on your computer — after that it’s available with micromamba create -n myenv python -c conda-forge (we’re working on a simple installation for Windows. Until then follow the docs).
+- **[picomamba](https://github.com/mamba-org/picomamba):** mamba in the browser thanks to WASM (also take a look at [emscripten-forge](http://github.com/emscripten-forge/recipes) where we are crossing over WASM × conda-forge to build packages for mamba & the web)
 
 ## We’re not stopping here!
 There’s more we’re planning to add to mamba soon, including:
 
-- [boa](https://github.com/mamba-org/boa): faster package building using `libmamba` and a new recipe format. It’s a revolutionary approach on building packages that is much faster than conda-build and provides a much nicer experience. The stated goal is to make `boa` good enough so that conda-forge can start using it.
-- [powerloader](https://github.com/mamba-org/powerloader): we are working hard on the next “network”-backend for mamba with full support for multiple mirrors, resumable downloads, zchunk (delta-update) support and much more. The integration of powerloader into mamba is going to be another big milestone and one of the main goals for the first release post-1.0
+- **[boa](https://github.com/mamba-org/boa):** faster package building using `libmamba` and a new recipe format. It’s a revolutionary approach on building packages that is much faster than conda-build and provides a much nicer experience. The stated goal is to make `boa` good enough so that conda-forge can start using it.
+- **[powerloader](https://github.com/mamba-org/powerloader):** we are working hard on the next “network”-backend for mamba with full support for multiple mirrors, resumable downloads, zchunk (delta-update) support and much more. The integration of powerloader into mamba is going to be another big milestone and one of the main goals for the first release post-1.0
 - **OCI Mirror:** part of the powerloader effort is to enable OCI registries as conda package mirrors. We are already operating a full mirror of the conda-forge repository on [Github Packages](https://github.com/orgs/channel-mirrors/packages). To make that mirror actually useful, we need to integrate powerloader into mamba.
 - **Package signing:** we want to investigate the integration of `sigstore` further to allow for simple package signing of conda packages — this will be even simpler when we use an OCI registry as sigstore supports those natively
 - **Better error messages:** the first couple of PRs have already landed that build the foundation of better solver messages when no dependency solution can be found. You can find some of the prototype work here: https://github.com/AntoinePrv/mamba-error-reporting/blob/main/examples.ipynb
