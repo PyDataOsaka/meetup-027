@@ -43,11 +43,11 @@ We would love it if more people try micromamba and provide us with feedback. It�
 ## We’re not stopping here!
 There’s more we’re planning to add to mamba soon, including:
 
-- boa: faster package building using `libmamba` and a new recipe format. It’s a revolutionary approach on building packages that is much faster than conda-build and provides a much nicer experience. The stated goal is to make boa good enough so that conda-forge can start using it.
-- powerloader: we are working hard on the next “network”-backend for mamba with full support for multiple mirrors, resumable downloads, zchunk (delta-update) support and much more. The integration of powerloader into mamba is going to be another big milestone and one of the main goals for the first release post-1.0
-- OCI Mirror: part of the powerloader effort is to enable OCI registries as conda package mirrors. We are already operating a full mirror of the conda-forge repository on Github Packages. To make that mirror actually useful, we need to integrate powerloader into mamba.
-- Package signing: we want to investigate the integration of sigstore further to allow for simple package signing of conda packages — this will be even simpler when we use an OCI registry as sigstore supports those natively
-- Better error messages: the first couple of PRs have already landed that build the foundation of better solver messages when no dependency solution can be found. You can find some of the prototype work here: https://github.com/AntoinePrv/mamba-error-reporting/blob/main/examples.ipynb
+- [boa](https://github.com/mamba-org/boa): faster package building using `libmamba` and a new recipe format. It’s a revolutionary approach on building packages that is much faster than conda-build and provides a much nicer experience. The stated goal is to make `boa` good enough so that conda-forge can start using it.
+- [powerloader](https://github.com/mamba-org/powerloader): we are working hard on the next “network”-backend for mamba with full support for multiple mirrors, resumable downloads, zchunk (delta-update) support and much more. The integration of powerloader into mamba is going to be another big milestone and one of the main goals for the first release post-1.0
+- **OCI Mirror:** part of the powerloader effort is to enable OCI registries as conda package mirrors. We are already operating a full mirror of the conda-forge repository on [Github Packages](https://github.com/orgs/channel-mirrors/packages). To make that mirror actually useful, we need to integrate powerloader into mamba.
+- **Package signing:** we want to investigate the integration of `sigstore` further to allow for simple package signing of conda packages — this will be even simpler when we use an OCI registry as sigstore supports those natively
+- **Better error messages:** the first couple of PRs have already landed that build the foundation of better solver messages when no dependency solution can be found. You can find some of the prototype work here: https://github.com/AntoinePrv/mamba-error-reporting/blob/main/examples.ipynb
 
 ## And then there is more …
 A teaser for prefix.dev
