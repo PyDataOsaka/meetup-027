@@ -1,6 +1,8 @@
 <!-- # Releasing mamba 1.0 -->
 # mamba 1.0のリリース 
 
+![](https://miro.medium.com/max/720/0*_5teAY19rW39Xg1w)
+
 <!-- The mamba package manager has been in the works for 3 years. -->
 mambaパッケージマネージャは3年の間開発が続けられてきました。
 <!-- Starting from the simple idea whether it’s possible to make conda faster to a proper, standalone package management tool that is used by the largest distributions in the conda & mamba ecosystem (conda-forge and bioconda). -->
@@ -44,6 +46,7 @@ mambaは単純に`libmambapy`の上に構築され、CLIインタフェースを
 
 <!--## What’s new in the 1.0 release?-->
 ## バージョン1.0のリリースにおける新規変更点
+![](https://miro.medium.com/max/720/1*-shrIKC2hsBdFx7ehnQUGw.png)
 
 <!-- Most of our activity is currently focused on improving the `micromamba` experience. -->
 私たちの活動のほとんどは現在`micromamba`の体験を改善することに注力しています。
@@ -97,6 +100,7 @@ There’s more we’re planning to add to mamba soon, including:
 - **Better error messages:** 日本語訳
 
 ## And then there is more …
+![](https://miro.medium.com/max/720/1*CxK4wBPLSREAP1aASyOIpg.png)
 A teaser for prefix.dev
 
 <!-- **But wait — there’s more:** -->
@@ -107,6 +111,8 @@ A teaser for prefix.dev
 日本語訳
 
 ## Community
+
+![](https://miro.medium.com/max/720/1*n7nCAoLn2mBJT9A83YPziw.png)
 
 All the contributors for the 1.0 release!
 
@@ -137,6 +143,8 @@ All the contributors for the 1.0 release!
 日本語訳
 
 ### About the author
+
+![](https://miro.medium.com/max/300/1*JCUKBuHzM3XzKJkgeuEAUA.png)
 
 <!-- Wolf Vollprecht is the creator of mamba, and a core contributor to the conda-forge project. -->
 日本語訳
