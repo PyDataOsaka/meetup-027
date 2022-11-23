@@ -42,27 +42,29 @@ mambaは単純に`libmambapy`の上に構築され、CLIインタフェースを
 <!-- We are looking forward to more use cases for `libmamba` & `libmambapy` in the future! -->
 私たちは将来的に`libmamba`と`libmambapy`に対するより多くのユースケースが出て来ることを楽しみにしています。
 
-## What’s new in the 1.0 release?
+<!--## What’s new in the 1.0 release?-->
+## バージョン1.0のリリースにおける新規変更点
 
 <!-- Most of our activity is currently focused on improving the `micromamba` experience. -->
-日本語訳
+私たちの活動のほとんどは現在`micromamba`の体験を改善することに注力しています。
 <!-- `micromamba` is an evolution of `mamba` that does not rely on Python or conda. -->
-日本語訳
+`micromamba`はPythonやcondaを必要としない`mamba`の進化版です。
 <!-- It comes as a single binary which makes installation and *boot-strapping* very easy, and doesn’t require a base environment or a *miniconda/miniforge* installation. -->
-日本語訳
+シングルバイナリとして提供され、これによりインストールや*環境の立ち上げ*が非常に簡単になり、ベースとなる環境や*miniconda/miniforge*のインストールも必要としません。
 
 <!-- It also has a largely conda-compatible CLI (with some small deviations). -->
-日本語訳
+また、(微妙な違いはあるものの)ほぼconda互換のCLIを持っています。
 
 <!-- The 1.0 release comes with improved shell scripts with autocompletion available in PowerShell, xonsh, fish, bash and zsh. -->
-日本語訳
+バージョン1.0のリリースはPowerShell, xonsh, fish, bash, zshで利用可能な自動補完用のシェルスクリプトの改善版とともに提供されます。
 <!-- Micromamba now also has a “shell” subcommand to enter a sub-shell without having to modify the system (just run `micromamba shell -n someenv`). -->
-日本語訳
+Micromambaは今やシステムの変更を伴わずにサブシェルに入るための"shell"サブコマンドも持っています(`micromamba shell -n someenv`と実行するだけです).
+
 <!-- And finally for the future, micromamba can now update itself with the `micromamba self-update` command. -->
-日本語訳
+そして最終的に将来に向けて、micromambaは今や自分自身を`micromamba self-update`コマンドで更新できるようになりました。
 
 <!-- You can find [the full changelog here](https://github.com/mamba-org/mamba/releases/tag/2022.11.01). -->
-日本語訳
+[ここで完全なchangelog](https://github.com/mamba-org/mamba/releases/tag/2022.11.01)について確認することができます。
 
 ## Try it now
 <!-- We would love it if more people try `micromamba` and provide us with feedback. It’s easy to take `micromamba` for a spin: -->
