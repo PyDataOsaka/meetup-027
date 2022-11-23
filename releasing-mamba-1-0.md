@@ -1,43 +1,46 @@
-# Releasing mamba 1.0
+<!-- # Releasing mamba 1.0 -->
+# mamba 1.0のリリース 
 
 <!-- The mamba package manager has been in the works for 3 years. -->
-日本語訳
+mambaパッケージマネージャは3年の間開発が続けられてきました。
 <!-- Starting from the simple idea whether it’s possible to make conda faster to a proper, standalone package management tool that is used by the largest distributions in the conda & mamba ecosystem (conda-forge and bioconda). -->
-日本語訳
+condaをより高速化することが可能かどうかという単純なアイデアから始まり、condaとmambaにおける エコシステムの最大のディストリビューション (conda-forgeとbioconda)で使用されている、適切でスタンドアロンのパッケージ管理ツールへと成長しました。
 <!-- Today we are proud to announce that mamba is mature enough for a 1.0 release. -->
-日本語訳
+今日、私たちはmambaが1.0のリリースに十分なほど成熟したことを誇りを持ってアナウンスします。
 <!-- When we started the development of the mamba package manager, the conda-forge repository was already experiencing a major growth in the number of available package versions, and the existing “conda” package manager was unbearably slow for certain tasks. -->
-日本語訳
+私たちがmambaパッケージマネージャの開発を開始した時、conda-forgeリポジトリは既にパッケージの利用可能な複数のバージョンの急激な増加を経験しており、既存の"conda"パッケージマネージャーはある種のタスクに対しては我慢できないほど遅くなっていました。
+
 <!-- I was fuelled by the idea of publishing many robotics-related packages on conda-forge (specifically the [ROS stack](https://github.com/robostack/ros-humble)), but I realized that it would be difficult with the slowness of conda. -->
-日本語訳
+私は多くのロボット関係のパッケージをconda-forge(特に[ROSスタック](https://github.com/robostack/ros-humble))に公開するという考えに燃えていましたが、私はcondaの遅さによって困難となるであろうことに気付いていました。 
 <!-- Thankfully we tried to use the `libsolv` library to resolve package dependencies faster, and with a lot of support from the `libsolv` maintainers got an initial prototype pretty quickly! -->
-日本語訳
+ありがたいことに、私たちは`libsolv`ライブラリをパッケージ依存性をより速く解決するために使用することを試し、`libsolv`メンテナ達からの多くのサポートを受けて初期のプロトタイプをかなり迅速に作ることができました。
 
 <!-- Today, mamba is widely adopted by users across the PyData world and beyond, in CI systems or for quick deployments to the cloud (for example in the Jupyter/MyBinder projects). -->
-日本語訳
+今日、mambaはPyDataの世界におけるユーザー間や、更にCIシステムやクラウドへの迅速なデプロイ(例えばJupyter/MyBinderプロジェクト)においてで広く採用されています。
 
-## Strong foundations in C++
+<!-- ## Strong foundations in C++ -->
+## C++＋による強固な基盤
 
 <!-- Early on I decided to use C++ for the implementation of the critical parts of a speedy package management experience: -->
-日本語訳
+私はC++を高速なパッケージ管理のエクスペリエンスにおける致命的な部分の実装に用いることを早期に決定しました。
 <!-- C++ gives us a nice high-level interface (exposed in `libmamba`) and simple access to low-level C libraries ( `libsolv`, `libarchive` and `libcurl` are the main dependencies of mamba), and also — given that it is a compiled language — offers high performance for all operations. -->
-日本語訳
+つまり、C++を用いることにより、(`libmamba`において使用可能な)良い高レベルのインタフェースを提供し、低レベルなCライブラリ(`libsolv`、`libarchive`, `libcurl`がmambaの主な依存ライブラリ)へのシンプルなアクセスを提供します、そして、それがコンパイル言語である場合は、全ての操作に対して高効率な操作を提供します。
 
 <!-- Instead of making mamba a monolithic project, we decided to split it in smaller packages/parts for better flexibility and integration in downstream projects. -->
-日本語訳
+mambaをモノシリックなプロジェクトにする代わりに、私たちはそれを柔軟により小さなパッケージや部品へと分解し、下流となるプロジェクトに統合すること決めました。
 <!-- `libmamba` is a standalone library for all basic features related to package mamagement. -->
-日本語訳
+`libmamba`はパッケージ管理に関係する全ての基本機能に対するスタンドアローンなライブラリです。 
 <!-- Thanks to `pybind11`, it provides really nice and easy-to-use Python bindings through `libmambapy` . -->
-日本語訳
+`pybind11`のおかげで、`libmambapy`を通じて本当に素敵で簡単に使用可能なPythonバインディングを提供しています。
 <!-- mamba simply builds on top of `libmambapy` and adds the CLI interface. -->
-日本語訳
+mambaは単純に`libmambapy`の上に構築され、CLIインタフェースを追加したものとなります。
 
 <!-- We’re proud to say that one of the first serious users of `libmambapy` is the *conda* project; -->
-日本語訳
+私たちは`libmambapy`の最初の重大なユーザーの一つが*conda*プロジェクトであると誇りを持って言えます。
 <!-- they are integrating with it to provide the same speedy package resolving experience from `mamba` in `conda`! -->
-日本語訳
+つまり、彼らは`mamba`と同じ高速なパッケージ解決体験を提供するために(`libmambapy`を)`conda`に統合しています。
 <!-- We are looking forward to more use cases for `libmamba` & `libmambapy` in the future! -->
-日本語訳
+私たちは将来的に`libmamba`と`libmambapy`に対するより多くのユースケースが出て来ることを楽しみにしています。
 
 ## What’s new in the 1.0 release?
 
