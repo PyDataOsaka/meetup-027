@@ -4,7 +4,7 @@
 <!-- The mamba package manager has been in the works for 3 years. -->
 mambaパッケージマネージャは3年の間開発が続けられてきました。
 <!-- Starting from the simple idea whether it’s possible to make conda faster to a proper, standalone package management tool that is used by the largest distributions in the conda & mamba ecosystem (conda-forge and bioconda). -->
-condaをより高速化することが可能かどうかという単純なアイデアから始まり、condaとmambaにおける エコシステムの最大のディストリビューション (conda-forgeとbioconda)で使用されている、適切でスタンドアロンのパッケージ管理ツールへと成長しました。
+condaをより高速化することが可能かどうかという単純なアイデアから始まり、condaとmambaのエコシステムにおける最大のディストリビューション (conda-forgeとbioconda)で使用されることにふさわしいスタンドアローンのパッケージ管理ツールへと成長しました。
 <!-- Today we are proud to announce that mamba is mature enough for a 1.0 release. -->
 今日、私たちはmambaが1.0のリリースに十分なほど成熟したことを誇りを持ってアナウンスします。
 <!-- When we started the development of the mamba package manager, the conda-forge repository was already experiencing a major growth in the number of available package versions, and the existing “conda” package manager was unbearably slow for certain tasks. -->
@@ -16,7 +16,7 @@ condaをより高速化することが可能かどうかという単純なアイ
 ありがたいことに、私たちは`libsolv`ライブラリをパッケージ依存性をより速く解決するために使用することを試し、`libsolv`メンテナ達からの多くのサポートを受けて初期のプロトタイプをかなり迅速に作ることができました。
 
 <!-- Today, mamba is widely adopted by users across the PyData world and beyond, in CI systems or for quick deployments to the cloud (for example in the Jupyter/MyBinder projects). -->
-今日、mambaはPyDataの世界におけるユーザー間や、更にCIシステムやクラウドへの迅速なデプロイ(例えばJupyter/MyBinderプロジェクト)においてで広く採用されています。
+今日、mambaはPyDataの世界におけるユーザー間や、更にCIシステムやクラウドへの迅速なデプロイ(例えばJupyter/MyBinderプロジェクト)において広く採用されています。
 
 <!-- ## Strong foundations in C++ -->
 ## C++＋による強固な基盤
