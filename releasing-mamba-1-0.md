@@ -85,19 +85,21 @@ Micromambaは今やシステムの変更を伴わずにサブシェルに入る�
 <!-- - **[picomamba](https://github.com/mamba-org/picomamba):** mamba in the browser thanks to WASM (also take a look at [emscripten-forge](http://github.com/emscripten-forge/recipes) where we are crossing over WASM × conda-forge to build packages for mamba & the web) -->
 - **[picomamba](https://github.com/mamba-org/picomamba):** WASMの力によってブラウザ上で動作するmambaです(mambaとwebのためのパッケージをビルドするためにWASMとconda-forgeを連携させている[emscripten-forge](http://github.com/emscripten-forge/recipes)についても確認してみてください)。
 
-## We’re not stopping here!
-There’s more we’re planning to add to mamba soon, including:
+<!--## We’re not stopping here!-->
+## 私たちはここで止まりません！
+<!--There’s more we’re planning to add to mamba soon, including:-->
+下記のようにmambaにすぐに追加する予定の機能が更にあります。
 
 <!-- - **[boa](https://github.com/mamba-org/boa):** faster package building using `libmamba` and a new recipe format. It’s a revolutionary approach on building packages that is much faster than conda-build and provides a much nicer experience. The stated goal is to make `boa` good enough so that conda-forge can start using it. -->
-- **[boa](https://github.com/mamba-org/boa):** 日本語訳
+- **[boa](https://github.com/mamba-org/boa):** 新しいレシピフォーマットと`libmamba`を使ったより高速なパッケージ構築ツールです。 `conda-build`よりも更に速く更に良い体験を提供するパッケージビルドにおける革命的なアプローチです。
 <!-- - **[powerloader](https://github.com/mamba-org/powerloader):** we are working hard on the next “network”-backend for mamba with full support for multiple mirrors, resumable downloads, zchunk (delta-update) support and much more. The integration of powerloader into mamba is going to be another big milestone and one of the main goals for the first release post-1.0 -->
-- **[powerloader](https://github.com/mamba-org/powerloader):** 日本語訳
+- **[powerloader](https://github.com/mamba-org/powerloader):** 私たちは複数のミラーや継続可能なダウンロード、zchunk(差分アップデート)サポートや、更に多くの機能を完全にサポートしたmambaに対する次の"ネットワーク"バックエンドに熱心に取り組んでいます。powerloaderをmambaへと統合することはもう一つの大きなマイルストーン隣る予定であり、バージョン1.0以降の主な目標の一つになります。
 <!-- - **OCI Mirror:** part of the powerloader effort is to enable OCI registries as conda package mirrors. We are already operating a full mirror of the conda-forge repository on [Github Packages](https://github.com/orgs/channel-mirrors/packages). To make that mirror actually useful, we need to integrate powerloader into mamba. -->
-- **OCI Mirror:** 日本語訳
+- **OCI Mirror:** powerloaderに対する努力の一部はcondaパッケージのミラーとしてOCIレジストリを有効化することです。私たちは既にconda-forgeリポジトリの完全なミラーを[GitHub Packages](https://github.com/orgs/channel-mirrors/packages)上に設けようとしています。このミラーを確かに便利なものにするために、私たちはpowerloaderをmambaに統合する必要があります。
 <!-- - **Package signing:** we want to investigate the integration of `sigstore` further to allow for simple package signing of conda packages — this will be even simpler when we use an OCI registry as sigstore supports those natively -->
-- **Package signing:** 日本語訳
+- **Package signing:** 私たちは更に簡単なcondaパッケージに対する署名を実現するために`sigstore`を統合することを調査したいと考えています。私たちがそれらをネイティブにサポートするsigstoreとしてOCIレジストリを使用する時、これは更に簡単な手続きとなることでしょう。
 <!-- - **Better error messages:** the first couple of PRs have already landed that build the foundation of better solver messages when no dependency solution can be found. You can find some of the prototype work here: https://github.com/AntoinePrv/mamba-error-reporting/blob/main/examples.ipynb -->
-- **Better error messages:** 日本語訳
+- **Better error messages:** 依存関係の解決策が見つからない時により良いソルバーのメッセージの基礎を構築する最初の2つのプルリクエストが既にオープンされています。プロトタイプの作業の一部は https://github.com/AntoinePrv/mamba-error-reporting/blob/main/examples.ipynb で確認できます。
 
 ## And then there is more …
 ![](https://miro.medium.com/max/720/1*CxK4wBPLSREAP1aASyOIpg.png)
