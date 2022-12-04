@@ -4,43 +4,43 @@
 ![](https://miro.medium.com/max/720/0*_5teAY19rW39Xg1w)
 
 <!-- The mamba package manager has been in the works for 3 years. -->
-mambaパッケージマネージャは3年の間開発が続けられてきました。
+mambaパッケージマネージャは3年の間、開発が続けられてきました。
 <!-- Starting from the simple idea whether it’s possible to make conda faster to a proper, standalone package management tool that is used by the largest distributions in the conda & mamba ecosystem (conda-forge and bioconda). -->
-condaをより高速化することが可能かどうかという単純なアイデアから始まり、condaとmambaのエコシステムにおける最大のディストリビューション (conda-forgeとbioconda)で使用されることにふさわしいスタンドアローンのパッケージ管理ツールへと成長しました。
+condaをより高速化することが可能かどうかという単純なアイデアから始まり、condaとmambaのエコシステムにおける最大のディストリビューション(conda-forgeとbioconda)で使用されることにふさわしいスタンドアローンのパッケージ管理ツールへと成長しました。
 <!-- Today we are proud to announce that mamba is mature enough for a 1.0 release. -->
 今日、私たちはmambaが1.0のリリースに十分なほど成熟したことを誇りを持ってアナウンスします。
 <!-- When we started the development of the mamba package manager, the conda-forge repository was already experiencing a major growth in the number of available package versions, and the existing “conda” package manager was unbearably slow for certain tasks. -->
-私たちがmambaパッケージマネージャの開発を開始した時、conda-forgeリポジトリは既にパッケージの利用可能な複数のバージョンの急激な増加を経験しており、既存の"conda"パッケージマネージャーはある種のタスクに対しては我慢できないほど遅くなっていました。
+私たちがmambaパッケージマネージャの開発を開始した時、すでにconda-forgeリポジトリでは利用可能なパッケージのバージョンの数が急増しており、既存の"conda"パッケージマネージャーはある種のタスクに対しては我慢できないほど遅くなっていました。
 
 <!-- I was fuelled by the idea of publishing many robotics-related packages on conda-forge (specifically the [ROS stack](https://github.com/robostack/ros-humble)), but I realized that it would be difficult with the slowness of conda. -->
-私は多くのロボット関係のパッケージをconda-forge(特に[ROSスタック](https://github.com/robostack/ros-humble))に公開するという考えに燃えていましたが、私はcondaの遅さによって困難となるであろうことに気付いていました。 
+私は多くのロボット関係のパッケージをconda-forge(特に[ROSスタック](https://github.com/robostack/ros-humble))に公開するという考えに燃えていましたが、私はそれがcondaの遅さによって困難となるであろうことに気付いていました。 
 <!-- Thankfully we tried to use the `libsolv` library to resolve package dependencies faster, and with a lot of support from the `libsolv` maintainers got an initial prototype pretty quickly! -->
-ありがたいことに、私たちは`libsolv`ライブラリをパッケージ依存性をより速く解決するために使用することを試し、`libsolv`メンテナ達からの多くのサポートを受けて初期のプロトタイプをかなり迅速に作ることができました。
+ありがたいことに、私たちはパッケージ依存性をより速く解決するために`libsolv`ライブラリを試用し、`libsolv`メンテナ達からの多くのサポートを受けて初期のプロトタイプをかなり迅速に作ることができました。
 
 <!-- Today, mamba is widely adopted by users across the PyData world and beyond, in CI systems or for quick deployments to the cloud (for example in the Jupyter/MyBinder projects). -->
-今日、mambaはPyDataの世界におけるユーザー間や、更にCIシステムやクラウドへの迅速なデプロイ(例えばJupyter/MyBinderプロジェクト)において広く採用されています。
+現在、mambaはPyDataの世界各地のユーザー、更にはCIシステムやクラウドへの迅速なデプロイ(例えばJupyter/MyBinderプロジェクト)において広く採用されています。
 
 <!-- ## Strong foundations in C++ -->
 ## C++＋による強固な基盤
 
 <!-- Early on I decided to use C++ for the implementation of the critical parts of a speedy package management experience: -->
-私はC++を高速なパッケージ管理のエクスペリエンスにおける致命的な部分の実装に用いることを早期に決定しました。
+早い段階で、私はC++を高速なパッケージ管理エクスペリエンスの重要な部分の実装に用いることを決めました。
 <!-- C++ gives us a nice high-level interface (exposed in `libmamba`) and simple access to low-level C libraries ( `libsolv`, `libarchive` and `libcurl` are the main dependencies of mamba), and also — given that it is a compiled language — offers high performance for all operations. -->
-つまり、C++を用いることにより、(`libmamba`において使用可能な)良い高レベルのインタフェースを提供し、低レベルなCライブラリ(`libsolv`、`libarchive`, `libcurl`がmambaの主な依存ライブラリ)へのシンプルなアクセスを提供します、そして、それがコンパイル言語である場合は、全ての操作に対して高効率な操作を提供します。
+C++は、洗練された高レベルの(`libmamba`でさらされる)インタフェース、そして低レベルなCライブラリ(`libsolv`、`libarchive`, `libcurl`がmambaの主な依存ライブラリです)へのシンプルなアクセスを我々に提供してくれます。また、C++は - コンパイル言語なので - 全ての操作に対して高いパフォーマンスを提供してくれます。
 
 <!-- Instead of making mamba a monolithic project, we decided to split it in smaller packages/parts for better flexibility and integration in downstream projects. -->
 mambaをモノシリックなプロジェクトにする代わりに、私たちはそれを柔軟により小さなパッケージや部品へと分解し、下流となるプロジェクトに統合すること決めました。
 <!-- `libmamba` is a standalone library for all basic features related to package mamagement. -->
 `libmamba`はパッケージ管理に関係する全ての基本機能に対するスタンドアローンなライブラリです。 
 <!-- Thanks to `pybind11`, it provides really nice and easy-to-use Python bindings through `libmambapy` . -->
-`pybind11`のおかげで、`libmambapy`を通じて本当に素敵で簡単に使用可能なPythonバインディングを提供しています。
+`pybind11`のおかげで、`libmamba`は`libmambapy`を介して実に洗練された使いやすいPythonバインディングを提供できています。
 <!-- mamba simply builds on top of `libmambapy` and adds the CLI interface. -->
-mambaは単純に`libmambapy`の上に構築され、CLIインタフェースを追加したものとなります。
+mambaはシンプルに`libmambapy`の上に構築され、CLIインタフェースを追加したものです。
 
 <!-- We’re proud to say that one of the first serious users of `libmambapy` is the *conda* project; -->
 私たちは`libmambapy`の最初の重大なユーザーの一つが*conda*プロジェクトであると誇りを持って言えます。
 <!-- they are integrating with it to provide the same speedy package resolving experience from `mamba` in `conda`! -->
-つまり、彼らは`mamba`と同じ高速なパッケージ解決体験を提供するために(`libmambapy`を)`conda`に統合しています。
+*conda*プロジェクトは`mamba`と同じ高速なパッケージ解決体験を提供するために(`libmambapy`を)`conda`に統合しています。
 <!-- We are looking forward to more use cases for `libmamba` & `libmambapy` in the future! -->
 私たちは将来的に`libmamba`と`libmambapy`に対するより多くのユースケースが出て来ることを楽しみにしています。
 
@@ -49,7 +49,7 @@ mambaは単純に`libmambapy`の上に構築され、CLIインタフェースを
 ![](https://miro.medium.com/max/720/1*-shrIKC2hsBdFx7ehnQUGw.png)
 
 <!-- Most of our activity is currently focused on improving the `micromamba` experience. -->
-私たちの活動のほとんどは現在`micromamba`の体験を改善することに注力しています。
+現在、私たちの活動のほとんどは`micromamba`の体験の改善に重点が置かれています。
 <!-- `micromamba` is an evolution of `mamba` that does not rely on Python or conda. -->
 `micromamba`はPythonやcondaを必要としない`mamba`の進化版です。
 <!-- It comes as a single binary which makes installation and *boot-strapping* very easy, and doesn’t require a base environment or a *miniconda/miniforge* installation. -->
@@ -64,7 +64,7 @@ mambaは単純に`libmambapy`の上に構築され、CLIインタフェースを
 Micromambaは今やシステムの変更を伴わずにサブシェルに入るための"shell"サブコマンドも持っています(`micromamba shell -n someenv`と実行するだけです).
 
 <!-- And finally for the future, micromamba can now update itself with the `micromamba self-update` command. -->
-そして最終的に将来に向けて、micromambaは今や自分自身を`micromamba self-update`コマンドで更新できるようになりました。
+そして最後に将来のために、micromambaは今や自分自身を`micromamba self-update`コマンドで更新できるようになっています。
 
 <!-- You can find [the full changelog here](https://github.com/mamba-org/mamba/releases/tag/2022.11.01). -->
 [ここで完全なchangelog](https://github.com/mamba-org/mamba/releases/tag/2022.11.01)について確認することができます。
@@ -75,13 +75,13 @@ Micromambaは今やシステムの変更を伴わずにサブシェルに入る�
 私たちはより多くの人が`micromamba`を試し、私たちにフィードバックをくださることを望んでいます。`micromamba`を試しに使ってみるのは簡単です。
 
 <!-- - **[provision-with-micromamba](https://github.com/mamba-org/provision-with-micromamba):** use micromamba inside Github Actions to setup the CI environments quickly -->
-- **[provision-with-micromamba](https://github.com/mamba-org/provision-with-micromamba):** GitHub Actionsの中でCI環境を迅速に構築するためにmicromambaを使用
+- **[provision-with-micromamba](https://github.com/mamba-org/provision-with-micromamba):** これはmicromambaを使用して、GitHub Actionsの中でCI環境を素早くセットアップしてくれます。
 <!-- - **[micromamba-docker](https://github.com/mamba-org/micromamba-docker):** use the small `micromamba-docker` image to build your containers with ease -->
-- **[micromamba-docker](https://github.com/mamba-org/micromamba-docker):** 自身のコンテナを簡単に構築するために使用できる小さなdockerイメージである`micromamba-docker`
+- **[micromamba-docker](https://github.com/mamba-org/micromamba-docker):** これは小さな `micromamba-docker`イメージを使用して、コンテナーを簡単にビルドしてくれます。
 <!-- - **[micromamba-devcontainer](https://github.com/mamba-org/micromamba-devcontainer):** A general-purpose micromamba-enabled VS Code development container image — save the time and effort of configuring development tools for each project × collaborator × device. -->
-- **[micromamba-devcontainer](https://github.com/mamba-org/micromamba-devcontainer):** 一般的な目的のためのmicromambaが有効化されたVS Code開発用のコンテナイメージ。プロジェクト、コラボレータ、デバイスそれぞれに対して開発ツールを設定するための時間を節約可能。
+- **[micromamba-devcontainer](https://github.com/mamba-org/micromamba-devcontainer):** 一般的な目的のためのmicromambaが有効化されたVS Code開発用のコンテナイメージです。プロジェクト、コラボレータ、デバイスそれぞれに対して開発ツールを設定するための時間と労力を節約してくれます。
 <!-- - **micromamba on your local machine / in the cloud:** run `curl micro.mamba.pm/install.sh | bash` to install micromamba on your computer — after that it’s available with `micromamba create -n myenv python -c conda-forge` (we’re working on a simple installation for Windows. Until then follow the docs). -->
-- **ローカルマシン環境やクラウド環境におけるmicromamba:**  micromambaをコンピュータにインストールするために`curl micro.mamba.pm/install.sh | bash`を実行し、その後に`micromamba create -n myenv python -c conda-forge`が実行可能となります(私たちはWindowsに対するシンプルなインストール方法の実現にも取り組んでいます。その時が来るまではドキュメントを参照してください)。
+- **ローカルマシン環境やクラウド環境におけるmicromamba:**  micromambaをコンピュータにインストールするために`curl micro.mamba.pm/install.sh | bash`を実行し、その後に`micromamba create -n myenv python -c conda-forge`を実行すると利用可能となります(私たちはWindowsに対するシンプルなインストール方法の実現にも取り組んでいます。その時が来るまではドキュメントに従ってください)。
 <!-- - **[picomamba](https://github.com/mamba-org/picomamba):** mamba in the browser thanks to WASM (also take a look at [emscripten-forge](http://github.com/emscripten-forge/recipes) where we are crossing over WASM × conda-forge to build packages for mamba & the web) -->
 - **[picomamba](https://github.com/mamba-org/picomamba):** WASMの力によってブラウザ上で動作するmambaです(mambaとwebのためのパッケージをビルドするためにWASMとconda-forgeを連携させている[emscripten-forge](http://github.com/emscripten-forge/recipes)についても確認してみてください)。
 
@@ -91,15 +91,15 @@ Micromambaは今やシステムの変更を伴わずにサブシェルに入る�
 下記のようにmambaにすぐに追加する予定の機能が更にあります。
 
 <!-- - **[boa](https://github.com/mamba-org/boa):** faster package building using `libmamba` and a new recipe format. It’s a revolutionary approach on building packages that is much faster than conda-build and provides a much nicer experience. The stated goal is to make `boa` good enough so that conda-forge can start using it. -->
-- **[boa](https://github.com/mamba-org/boa):** 新しいレシピフォーマットと`libmamba`を使ったより高速なパッケージ構築ツールです。 `conda-build`よりも更に速く更に良い体験を提供するパッケージビルドにおける革命的なアプローチです。
+- **[boa](https://github.com/mamba-org/boa):** 新しいレシピフォーマットと`libmamba`を使ったより高速なパッケージ構築ツールです。 conda-buildよりも更に速く更に良い体験を提供するパッケージビルドにおける革命的なアプローチです。その段階的な目標は、conda-forgeがそれを使い始めることができるように`boa`を十分に良くすることです。
 <!-- - **[powerloader](https://github.com/mamba-org/powerloader):** we are working hard on the next “network”-backend for mamba with full support for multiple mirrors, resumable downloads, zchunk (delta-update) support and much more. The integration of powerloader into mamba is going to be another big milestone and one of the main goals for the first release post-1.0 -->
-- **[powerloader](https://github.com/mamba-org/powerloader):** 私たちは複数のミラーや継続可能なダウンロード、zchunk(差分アップデート)サポートや、更に多くの機能を完全にサポートしたmambaに対する次の"ネットワーク"バックエンドに熱心に取り組んでいます。powerloaderをmambaへと統合することはもう一つの大きなマイルストーン隣る予定であり、バージョン1.0以降の主な目標の一つになります。
+- **[powerloader](https://github.com/mamba-org/powerloader):** 私たちは複数のミラーや再開可能なダウンロード、zchunk(差分アップデート)サポートや、更に多くの機能を完全にサポートしたmambaのための次の"ネットワーク"バックエンドに熱心に取り組んでいます。powerloaderをmambaへと統合することはもう一つの大きなマイルストーンとなる予定であり、バージョン1.0以降の最初のリリースの主な目標の一つになります。
 <!-- - **OCI Mirror:** part of the powerloader effort is to enable OCI registries as conda package mirrors. We are already operating a full mirror of the conda-forge repository on [Github Packages](https://github.com/orgs/channel-mirrors/packages). To make that mirror actually useful, we need to integrate powerloader into mamba. -->
-- **OCI Mirror:** powerloaderに対する努力の一部はcondaパッケージのミラーとしてOCIレジストリを有効化することです。私たちは既にconda-forgeリポジトリの完全なミラーを[GitHub Packages](https://github.com/orgs/channel-mirrors/packages)上に設けようとしています。このミラーを確かに便利なものにするために、私たちはpowerloaderをmambaに統合する必要があります。
+- **OCI Mirror:** powerloaderの取り組みの一部は、OCIレジストリをcondaパッケージのミラーとして使えるようにすることです。私たちは既にconda-forgeリポジトリの完全なミラーを[GitHub Packages](https://github.com/orgs/channel-mirrors/packages)上で運用しています。このミラーを実際に役立つようにするために、私たちはpowerloaderをmambaに統合する必要があります。
 <!-- - **Package signing:** we want to investigate the integration of `sigstore` further to allow for simple package signing of conda packages — this will be even simpler when we use an OCI registry as sigstore supports those natively -->
-- **Package signing:** 私たちは更に簡単なcondaパッケージに対する署名を実現するために`sigstore`を統合することを調査したいと考えています。私たちがそれらをネイティブにサポートするsigstoreとしてOCIレジストリを使用する時、これは更に簡単な手続きとなることでしょう。
+- **Package signing:** 私たちはcondaパッケージに対する簡単な署名を実現するために`sigstore`の統合を更に調査したいと考えています。sigstoreがOCIレジストリをネイティブにサポートしているため、OCIレジストリを使用すると、署名は更に簡単になります。
 <!-- - **Better error messages:** the first couple of PRs have already landed that build the foundation of better solver messages when no dependency solution can be found. You can find some of the prototype work here: https://github.com/AntoinePrv/mamba-error-reporting/blob/main/examples.ipynb -->
-- **Better error messages:** 依存関係の解決策が見つからない時により良いソルバーのメッセージの基礎を構築する最初の2つのプルリクエストが既にオープンされています。プロトタイプの作業の一部は https://github.com/AntoinePrv/mamba-error-reporting/blob/main/examples.ipynb で確認できます。
+- **Better error messages:** 依存関係の解決策が見つからない時に、より良いソルバーのメッセージの基盤を構築する最初の2つのプルリクエストが既に上がっています。プロトタイプ作業の一部は https://github.com/AntoinePrv/mamba-error-reporting/blob/main/examples.ipynb で確認できます。
 
 ## And then there is more …
 ![](https://miro.medium.com/max/720/1*CxK4wBPLSREAP1aASyOIpg.png)
