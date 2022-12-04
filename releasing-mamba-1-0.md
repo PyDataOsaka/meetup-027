@@ -101,54 +101,54 @@ Micromambaは今やシステムの変更を伴わずにサブシェルに入る�
 <!-- - **Better error messages:** the first couple of PRs have already landed that build the foundation of better solver messages when no dependency solution can be found. You can find some of the prototype work here: https://github.com/AntoinePrv/mamba-error-reporting/blob/main/examples.ipynb -->
 - **Better error messages:** 依存関係の解決策が見つからない時に、より良いソルバーのメッセージの基盤を構築する最初の2つのプルリクエストが既に上がっています。プロトタイプ作業の一部は https://github.com/AntoinePrv/mamba-error-reporting/blob/main/examples.ipynb で確認できます。
 
-## And then there is more …
-![](https://miro.medium.com/max/720/1*CxK4wBPLSREAP1aASyOIpg.png)
-A teaser for prefix.dev
+<!--## And then there is more …-->
+## そして更に…
+![A teaser for prefix.dev](https://miro.medium.com/max/720/1*CxK4wBPLSREAP1aASyOIpg.png)
 
 <!-- **But wait — there’s more:** -->
-日本語訳
+**しかし待ってください - 更に告げることがあります:**
 <!-- we’re happy to announce that we’ve also started a new company called **prefix.dev** to move software package management and more forward! -->
-日本語訳
+私たちはソフトウェアパッケージ管理を更に前に進めるために、**prefix.dev**という名前の新しい会社を既に始動させたことを喜んで告知いたします。
 <!-- We’ll have more to share on that next week: if you want the latest news, you can [follow me on Twitter](https://twitter.com/wuoulf). -->
-日本語訳
+私たちは次週、多くのことを共有できるでしょう。もし最新のニュースが必要であれば、[私をTwitterでフォロー](https://twitter.com/wuoulf)してください。
 
-## Community
+<!--## Community -->
+## コミュニティ
 
-![](https://miro.medium.com/max/720/1*n7nCAoLn2mBJT9A83YPziw.png)
-
-All the contributors for the 1.0 release!
+![All the contributors for the 1.0 release!](https://miro.medium.com/max/720/1*n7nCAoLn2mBJT9A83YPziw.png)
 
 <!-- We have recently begun to have “mamba meetings” every week on Monday 16:00 CET. -->
-日本語訳
+私たちは最近"mambaミーティング"を毎週月曜日の16:00(CET)に始めました。
 <!-- Everybody is invited (users and maintainers alike). -->
-日本語訳
+誰でも(ユーザやメンテナなど)参加が可能です。
 <!-- [Here is the calendar link](https://calendar.google.com/calendar/u/0?cid=YWIzanJmcGVkZTBrcTB1YnNyb2U4MmNkMDBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ). -->
-日本語訳
+[カレンダーのリンク](https://calendar.google.com/calendar/u/0?cid=YWIzanJmcGVkZTBrcTB1YnNyb2U4MmNkMDBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ)がここにあります。
 <!-- We also have a little “Gitter” community now: https://gitter.im/mamba-org/Lobby -->
-日本語訳
+また、私たちは小さな"Gitter"コミュニティも抱えています: https://gitter.im/mamba-org/Lobby
 
 <!-- It is also really cool to see the mamba contributor community growing: -->
-日本語訳
+mambaのコントリビュータコミュニティの発展を眺めることも非常にクールなことです:
 
 <!-- - **Claudia Rogoz** from *Palantir* and **Antoine Provoust** at *QuantStack* are currently working hard on improving solver messages -->
-- **Claudia Rogoz** from *Palantir* and **Antoine Provoust** at *QuantStack* 日本語訳
+- *Palantir*の**Claudia Rogoz**と*QuantStack*で働く**Antoine Provoust**は現在solverのメッセージの改善に熱心に取り組んでいます。
 <!-- - **Joel Lamotte** and **Johan Mabille** of *QuantStack* have contributed many improvements to micromamba (and are currently focusing on the powerloader integration). -->
-- **Joel Lamotte** and **Johan Mabille** of *QuantStack* 日本語訳
+- *QuantStack*で働く**Joel Lamotte**と**Johan Mabille**はmicromambaに対する多くの改善点に貢献しています(現在powerloaderとの統合に注力しています)。
 <!-- - **Jonas Haag** from *QuantCo* has contributed countless improvements and is now a core maintainer with merge rights. Others at *QuantCo* have added fixes and improvements as well: thanks Pavel Zwerschke and Adrian Freund. -->
-- **Jonas Haag** from *QuantCo* 日本語訳
+- *QuantCo*で働く**Jonas Haag**は数えきれない改善に貢献してきており現在はマージ権を持つコアメンテナとなっています。*QuantCo*における他の人々も修正や改善を同様に追加してきていました: Pavel ZwerschkeとAdrian Freundに感謝します。
 <!-- - **Jaime Rodríguez-Guerra** from *Quansight* has worked on the conda ↔ libmamba integration for which he did a lot of testing and helped us uncover some corner cases. That helped to make mamba more stable. -->
-- **Jaime Rodríguez-Guerra** from *Quansight* 日本語訳
+- *Quansight*で働く**Jaime Rodríguez-Guerra**は多くのテストを実行したりカバーされていなかったいくつかのコーナーケースを補助するといったconda↔libmamba間の統合に取り組んできました。それはmambaをより安定させる助けとなりました。
 <!-- - **Chris Burr** from *CERN* has really improved the speed of micromamba’s linking phase -->
-- **Chris Burr** from *CERN* 日本語訳
+- *CERN*で働く**Chris Burr**はmicromambaのリンクフェーズにおける速度を劇的に改善しました。
 
 <!-- Thanks to all these wonderful contributions, mamba is as fast and stable as it is today. -->
-日本語訳
+これら全ての素晴らしい貢献のおかげで、mambaは現在のように高速で安定したものとなっています。
 
-### About the author
+<!--### About the author-->
+### 著者について
 
 ![](https://miro.medium.com/max/300/1*JCUKBuHzM3XzKJkgeuEAUA.png)
 
 <!-- Wolf Vollprecht is the creator of mamba, and a core contributor to the conda-forge project. -->
-日本語訳
+Wolf Vollprechtはmambaの作者であり、conda-forgeプロジェクトに対するコアコントリビュータです。
 <!-- He also organizes PackagingCon, the first conference for software package management. -->
-日本語訳
+彼はまたソフトウェアパッケージ管理に関する初のカンファレンスである、PackagingConを主催しています。
