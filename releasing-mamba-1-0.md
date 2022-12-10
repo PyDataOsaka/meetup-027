@@ -108,7 +108,7 @@ Micromambaは今やシステムの変更を伴わずにサブシェルに入る�
 <!-- **But wait — there’s more:** -->
 **しかし待ってください - 更に告げることがあります:**
 <!-- we’re happy to announce that we’ve also started a new company called **prefix.dev** to move software package management and more forward! -->
-私たちはソフトウェアパッケージ管理を更に前に進めるために、**prefix.dev**という名前の新しい会社を既に始動させたことを喜んで告知いたします。
+私たちはソフトウェアパッケージ管理を更に前進させるために、**prefix.dev**という名前の新しい会社を既に起こしていることを喜んで告知いたします。
 <!-- We’ll have more to share on that next week: if you want the latest news, you can [follow me on Twitter](https://twitter.com/wuoulf). -->
 私たちは次週、多くのことを共有できるでしょう。もし最新のニュースが必要であれば、[私をTwitterでフォロー](https://twitter.com/wuoulf)してください。
 
@@ -124,7 +124,7 @@ Micromambaは今やシステムの変更を伴わずにサブシェルに入る�
 <!-- [Here is the calendar link](https://calendar.google.com/calendar/u/0?cid=YWIzanJmcGVkZTBrcTB1YnNyb2U4MmNkMDBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ). -->
 [カレンダーのリンク](https://calendar.google.com/calendar/u/0?cid=YWIzanJmcGVkZTBrcTB1YnNyb2U4MmNkMDBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ)がここにあります。
 <!-- We also have a little “Gitter” community now: https://gitter.im/mamba-org/Lobby -->
-また、私たちは小さな"Gitter"コミュニティも抱えています: https://gitter.im/mamba-org/Lobby
+また、私たちは小さな"Gitter"コミュニティも持っています: https://gitter.im/mamba-org/Lobby
 
 <!-- It is also really cool to see the mamba contributor community growing: -->
 mambaのコントリビュータコミュニティの発展を眺めることも非常にクールなことです:
