@@ -1,3 +1,9 @@
+# Releasing mamba 1.0 の日本語訳
+
+この記事は[Releasing mamba 1.0](https://wolfv.medium.com/releasing-mamba-1-0-8e3c52cc6d37)の日本語翻訳記事です。
+typoや翻訳ミスを見つけましたら[こちらのリポジトリ](https://github.com/PyDataOsaka/meetup-027)のissueから報告いただくか、当該記事に対応したmdファイルに対してプルリクエストを発行していただければと思います。
+
+---
 <!-- # Releasing mamba 1.0 -->
 # mamba 1.0のリリース 
 
